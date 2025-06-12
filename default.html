@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>My HTML Page</h1>
+  </body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selamat Tidur, Bitania</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+      z-index: 1;
+    }
+
+    p {
+      font-size: 1.4em;
+      max-width: 600px;
+      z-index: 1;
+    }
+
+    .sender {
+      margin-top: 2em;
+      font-style: italic;
+      font-size: 1.2em;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    .stars, .shooting-star {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .stars {
+      background: url('https://i.ibb.co/9NZqFYj/stars.png') repeat;
+      animation: twinkle 60s linear infinite;
+      z-index: 0;
+    }
+
+    .shooting-star::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 100%;
+      width: 150px;
+      height: 2px;
+      background: white;
+      opacity: 0.8;
+      transform: rotate(-45deg);
+      animation: shooting 5s ease-in-out infinite;
+    }
+
+    @keyframes twinkle {
+      from { background-position: 0 0; }
+      to { background-position: -10000px 5000px; }
+    }
+
+    @keyframes shooting {
+      0% { transform: translateX(0) translateY(0) rotate(-45deg); opacity: 0; }
+      10% { opacity: 1; }
+      50% { transform: translateX(-1500px) translateY(800px) rotate(-45deg); opacity: 0; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="shooting-star"></div>
+
+  <h1>Selamat Tidur, Bitania ✨</h1>
+  <p>Semoga malam ini ngga nyebelin dan mimpimu indah seperti bintang yang bersinar lembut di langit malam contohnya mimpiin aku.</p>
+  <div class="sender">Dari pacarmu Aan ganteng 😎</div>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+</body>
+</html>
